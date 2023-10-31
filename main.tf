@@ -4,7 +4,7 @@ terraform {
       source  = "HashiCraft/minecraft"
       version = "0.1.1"
     }
-docker = {
+    docker = {
       source = "kreuzwerker/docker"
       version = "3.0.2"
     }
@@ -17,12 +17,6 @@ provider "docker" {
 
 resource "docker_image" "sirplexus" {
   name = "sirplexus/minecraft-server-standalone:latest"
-}
-
-# Create a container
-resource "docker_container" "sirplexus" {
-  image = docker_image.sirplexus.image_id
-  name  = "sirplexus"
 }
 
 // Configure the provider with the RCON details of the Minecraft server

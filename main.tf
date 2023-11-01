@@ -15,10 +15,6 @@ provider "docker" {
   host = "unix:///var/run/docker.sock"
 }
 
-resource "docker_image" "sirplexus" {
-  name = "sirplexus/minecraft-server-standalone:latest"
-}
-
 // Configure the provider with the RCON details of the Minecraft server
 provider "minecraft" {
   address  = "localhost:25565"
@@ -31,9 +27,9 @@ module "cube" {
   material = "cobblestone"
 
   position = {
-    x = 29,
-    y = 70,
-    z = 21
+    x = 10,
+    y = 75,
+    z = -100
   }
 
   dimensions = {

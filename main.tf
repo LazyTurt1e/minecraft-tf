@@ -18,23 +18,33 @@ terraform {
 // Configure the provider with the RCON details of the Minecraft server
 provider "minecraft" {
   address  = "localhost:25565"
-  password = ""
+  password = "5879"
 }
 
-module "cube" {
-  source = "./cube"
-
-  material = "cobblestone"
+resource "minecraft_block" "stone" {
+  material = "minecraft:stone"
 
   position = {
-    x = 10,
-    y = 75,
-    z = -100
-  }
-
-  dimensions = {
-    width  = 2,
-    length = 2,
-    height = 2
+    x = 1,
+    y = 1,
+    z = 1
   }
 }
+
+# module "cube" {
+#   source = "./cube"
+
+#   material = "cobblestone"
+
+#   position = {
+#     x = 10,
+#     y = 75,
+#     z = -100
+#   }
+
+#   dimensions = {
+#     width  = 2,
+#     length = 2,
+#     height = 2
+#   }
+# }

@@ -4,21 +4,21 @@ terraform {
       source  = "HashiCraft/minecraft"
       version = "0.1.1"
     }
-    docker = {
-      source = "kreuzwerker/docker"
-      version = "3.0.2"
-    }
+    # docker = {
+    #   source = "kreuzwerker/docker"
+    #   version = "3.0.2"
+    # }
   }
 }
 
-provider "docker" {
-  host = "unix:///var/run/docker.sock"
-}
+# provider "docker" {
+#   host = "unix:///var/run/docker.sock"
+# }
 
 // Configure the provider with the RCON details of the Minecraft server
 provider "minecraft" {
   address  = "localhost:25565"
-  password = "5879"
+  password = ""
 }
 
 module "cube" {

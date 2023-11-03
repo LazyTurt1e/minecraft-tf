@@ -17,7 +17,7 @@ terraform {
 
 // Configure the provider with the RCON details of the Minecraft server
 provider "minecraft" {
-  address  = "localhost:25565"
+  address  = "localhost:25575"
   password = "5879"
 }
 
@@ -25,9 +25,9 @@ resource "minecraft_block" "stone" {
   material = "minecraft:stone"
 
   position = {
-    x = 1,
-    y = 1,
-    z = 1
+    x = -47,
+    y = 65,
+    z = 29
   }
 }
 

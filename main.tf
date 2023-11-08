@@ -4,16 +4,8 @@ terraform {
       source  = "HashiCraft/minecraft"
       version = "0.1.1"
     }
-    # docker = {
-    #   source = "kreuzwerker/docker"
-    #   version = "3.0.2"
-    # }
   }
 }
-
-# provider "docker" {
-#   host = "unix:///var/run/docker.sock"
-# }
 
 // Configure the provider with the RCON details of the Minecraft server
 provider "minecraft" {
@@ -21,30 +13,48 @@ provider "minecraft" {
   password = "5879"
 }
 
-resource "minecraft_block" "stone" {
-  material = "minecraft:stone"
+# resource "minecraft_block" "stone" {
+#   material = "minecraft:stone"
+
+#   position = {
+#     x = -47,
+#     y = 65,
+#     z = 29
+#   }
+# }
+
+module "cube1" {
+  source = "./cube"
+
+  material = "cobblestone"
 
   position = {
-    x = -47,
-    y = 65,
-    z = 29
+    x = 10,
+    y = 75,
+    z = -100
+  }
+
+  dimensions = {
+    width  = 5,
+    length = 5,
+    height = 5
   }
 }
 
-# module "cube" {
-#   source = "./cube"
+module "cube2" {
+  source = "./cube"
 
-#   material = "cobblestone"
+  material = "cobblestone"
 
-#   position = {
-#     x = 10,
-#     y = 75,
-#     z = -100
-#   }
+  position = {
+    x = 10,
+    y = 80,
+    z = -100
+  }
 
-#   dimensions = {
-#     width  = 2,
-#     length = 2,
-#     height = 2
-#   }
-# }
+  dimensions = {
+    width  = 5,
+    length = 5,
+    height = 5
+  }
+}

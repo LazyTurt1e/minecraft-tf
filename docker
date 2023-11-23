@@ -1,0 +1,6 @@
+FROM itzg/minecraft-server
+
+ENV EULA=true
+
+# Voeg hier eventuele aanvullende configuratieopties toe
+\

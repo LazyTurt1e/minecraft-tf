@@ -1,17 +1,12 @@
-terraform {
-  required_providers {
-    minecraft = {
-      source  = "HashiCraft/minecraft"
-      version = "0.1.1"
-    }
-  }
-}
+# resource "minecraft_block" "stone" {
+#   material = "minecraft:stone"
 
-// Configure the provider with the RCON details of the Minecraft server
-provider "minecraft" {
-  address  = "localhost:25575"
-  password = "5879"
-}
+#   position = {
+#     x = -47,
+#     y = 65,
+#     z = 29
+#   }
+# }
 
 # resource "minecraft_block" "stone" {
 #   material = "minecraft:stone"
@@ -23,38 +18,149 @@ provider "minecraft" {
 #   }
 # }
 
-module "cube1" {
+# module "name" {
+#   source = "./cube"
+
+#   material = "cobblestone"
+
+#   position = {
+#     x = 10,
+#     y = 75,
+#     z = -100
+#   }
+
+#   dimensions = {
+#     width  = 1,
+#     length = 6,
+#     height = 5
+#   }
+# }
+
+# module "pig" { 
+#  source = "./entity"
+
+#  entity = "pig"
+  
+#  amount=3
+
+#  location = {
+#    x = 224,
+#    y = 81,
+#    z = 2024
+#   }
+
+# }
+
+
+
+
+
+
+
+
+module "floor_for_test" {
   source = "./cube"
 
-  material = "cobblestone"
+  material = "smooth_stone"
 
   position = {
-    x = 10,
-    y = 75,
-    z = -100
+    x = 220,
+    y = 69,
+    z = 2020
   }
 
   dimensions = {
-    width  = 5,
-    length = 5,
-    height = 5
+    width  = 10,
+    length = 10,
+    height = 1
   }
 }
 
-module "cube2" {
-  source = "./cube"
-
-  material = "cobblestone"
+module "hollow-cube" {
+  source = "git::https://github.com/DevOpsPlayground/terraform_minecraft_playground.git//square"
+  material = "minecraft:stone"
 
   position = {
-    x = 10,
-    y = 80,
-    z = -100
+    x = 222,
+    y = 70,
+    z = 2022
   }
 
   dimensions = {
-    width  = 5,
-    length = 5,
-    height = 5
+    width  = 6,
+    length = 6,
+    height = 4
+  }
+}
+
+module "top_for_test" {
+  source = "./cube"
+
+  material = "smooth_stone"
+
+  position = {
+    x = 220,
+    y = 74,
+    z = 2020
+  }
+
+  dimensions = {
+    width  = 10,
+    length = 10,
+    height = 1
+  }
+}
+
+module "middel" {
+  source = "./cube"
+
+  material = "water"
+
+  position = {
+    x = 224,
+    y = 71,
+    z = 2024
+  }
+
+  dimensions = {
+    width  = 2,
+    length = 2,
+    height = 1
+  }
+}
+
+module "water_holder" {
+  source = "git::https://github.com/DevOpsPlayground/terraform_minecraft_playground.git//square"
+
+  material = "chiseled_stone_bricks"
+
+  position = {
+    x = 223,
+    y = 70,
+    z = 2023
+  }
+
+  dimensions = {
+    width  = 4,
+    length = 4,
+    height = 2
+  }
+}
+
+module "torch_inside" {
+  source = "git::https://github.com/DevOpsPlayground/terraform_minecraft_playground.git//square"
+
+  material = "torch"
+
+  position = {
+    x = 223,
+    y = 72,
+    z = 2023
+  }
+
+  dimensions = {
+    width  = 4,
+    length = 4,
+    height = 1
   }
 }

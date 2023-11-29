@@ -10,16 +10,6 @@
 #   }
 # }
 
-# resource "minecraft_block" "stone" {
-#   material = "minecraft:stone"
-
-#   position = {
-#     x = -47,
-#     y = 65,
-#     z = 29
-#   }
-# }
-
 # module "name" {
 #   source = "./cube"
 

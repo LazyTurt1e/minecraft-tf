@@ -1,7 +1,7 @@
 #EXAMPELS
 
 # resource "minecraft_block" "stone" {
-#   material = "stone"
+#   material = "minecraft:stone"
 
 #   position = {
 #     x = -47,

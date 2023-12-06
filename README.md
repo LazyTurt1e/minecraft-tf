@@ -12,18 +12,18 @@ Here I am going to atempt to run a terraform minecraft server.
 
  # Event longlist
 
-   ## Easy
+## Easy
  
 1. Make layouts and let people build using them.
 2. Make layouts and let people build with or without them.
 
-   ## Normal
+## Normal
 
 3. Make a guide on how to make layouts and let people build on their own and/or build without it.
 4. Make a guide on how to make layouts and let people build only according to their layouts.
 5. Make layouts and let people build the mechanism using them.
 
-   ## Advanced
+## Advanced
 
 6. Make layouts and let people assemble the mechanism with or without them.
 7. Make a guide on how to make layouts and let people build the mechanism themselves and/or without them.

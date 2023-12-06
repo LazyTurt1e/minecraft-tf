@@ -10,4 +10,4 @@ Here I am going to atempt to run a terraform minecraft server.
  
  git push -u origin main
 
- 123
+ 12
